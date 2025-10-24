@@ -1,4 +1,5 @@
 ---
+
 title: My Second Blog Post
 author: Astro Learner
 description: "After learning some Astro, I couldn't stop!"
@@ -7,6 +8,7 @@ image:
     alt: "The Astro logo on a dark background with a purple gradient arc."
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
+
 ---
 <html lang="en">
   <head>
@@ -15,9 +17,6 @@ tags: ["astro", "blogging", "learning in public", "successes"]
     <title>Astro</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
     <h1> post2<h1>
 
   </body>

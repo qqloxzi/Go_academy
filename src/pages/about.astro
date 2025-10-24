@@ -1,11 +1,13 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
 
 const pageTitle = "hakkımızda";
 const skillColor = "crimson";
 const fontWeight = "600";
 const textCase = "uppercase";
 ---
+<Navigation>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -26,9 +28,7 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/Team/">Blog</a>
+  
     <h1>{pageTitle}</h1>
     
   </body>
