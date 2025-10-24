@@ -1,7 +1,10 @@
 ---
-const pageTitle = "hakkımızda";
+import '../styles/global.css';
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const pageTitle = "hakkımızda";
+const skillColor = "crimson";
+const fontWeight = "600";
+const textCase = "uppercase";
 ---
 <html lang="en">
   <head>
@@ -10,6 +13,17 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>{pageTitle}</title>
+        <style define:vars={{skillColor,fontWeight,textCase}}>
+      h1 {
+        color: black;
+        font-size: 4rem;
+      }
+      .skill{
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
   </head>
   <body>
     <a href="/">Home</a>
