@@ -1,13 +1,13 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "hakkımızda";
 const skillColor = "crimson";
 const fontWeight = "600";
 const textCase = "uppercase";
 ---
-<Navigation>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -28,8 +28,8 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
-  
+    <Navigation />
     <h1>{pageTitle}</h1>
-    
+    <Footer />
   </body>
 </html>
