@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 const pageTitle = "anasayfa";
 ---
 
@@ -23,6 +24,8 @@ const pageTitle = "anasayfa";
   <body>
     <Header />
     <h1> {pageTitle}</h1>
+      <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+     <p> salfkasnflaskfnlasfknsalfksnlaskfnaslkn</p>
     <Footer />
       <script>
         import'../scripts/menu.js';
