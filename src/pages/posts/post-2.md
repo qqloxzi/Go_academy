@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 ---
 <html lang="en">
   <head>
@@ -6,10 +7,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Astro</title>
   </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-
+  <body>sdglksdnglds
   </body>
 </html>

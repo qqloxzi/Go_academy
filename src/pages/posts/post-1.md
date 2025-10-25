@@ -1,6 +1,6 @@
 ---
-
-title: My Second Blog Post
+layout: ../../layouts/MarkdownPostLayout.astro
+title: title
 author: Astro Learner
 description: "After learning some Astro, I couldn't stop!"
 image:
@@ -14,7 +14,7 @@ tags: ["astro", "blogging", "learning in public", "successes"]
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
-    <title>Astro</title>
+    <title>Astıruhıguhro</title>
   </head>
   <body>
     <h1> post2<h1>
