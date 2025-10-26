@@ -1,8 +1,29 @@
 ---
 ---
 <div id="main-menu" class="nav-links">
-<a href="/">Ana Sayfa</a>
+<a href="/" class="logo-link">
+    <img src="/public/deneme_logo.jpg" alt="Go Akademisi Logosu" class="logo" />
+  </a>
 <a href="/about/">Hakkımızda</a>
 <a href="/blog/">Go Kütüphanesi</a>
-<a href="/team/">Biz Kimiz?</a>
+<a href="/kurslar/">Kurslar</a>
 </div>
+
+<style>
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  .logo-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+</style>
