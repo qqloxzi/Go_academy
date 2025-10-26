@@ -131,4 +131,78 @@ footer {
   display: inline-block;
 }
 
+/* Sayfa başlığı */
+.blog-page-title {
+  text-align: center;
+  font-size: 42px;
+  color: #1e40af;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
 
+/* Blog listesi */
+.blog-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Her post kutusu */
+.blog-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Görseller */
+.blog-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Post başlıkları */
+.blog-post-title {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.blog-post-title:hover {
+  text-decoration: underline;
+}
+
+/* Post açıklamaları */
+.blog-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.blog-link {
+  display: block;           /* tüm kutuyu kapsar */
+  text-decoration: none;    /* link alt çizgisi kalkar */
+  color: inherit;           /* yazı rengini korur */
+}
+
+.blog-link:hover {
+  text-decoration: none;    /* hover’da çizgi olmasın */
+}
+
+.blog-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
