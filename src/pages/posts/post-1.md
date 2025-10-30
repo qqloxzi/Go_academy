@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Post 1 başlığı
+title: Kısaca, Go nedir?
 author: Ali Karakaya
-description: "post1 açıklaması"
-image: "/deneme_blog.jpg"
+description: ""
+image: "/deer.png"
 pubDate: 2022-07-08
-tags: ["astro", "blogging", "learning in public", "successes"]
+tags: ["go", "", "", ""]
 
 ---
 
-post icerigi dslgkdnslgjsngdsljkg
+Go bilmem nedir bilmem nedir.

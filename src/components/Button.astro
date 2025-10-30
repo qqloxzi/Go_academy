@@ -1,0 +1,70 @@
+---
+interface Props {
+    text: string; 
+    href?: string;
+    variant?: 'primary' | 'secondary';
+
+    class?: string;
+}
+
+const { text, href, variant = 'primary', class: className } = Astro.props;
+
+
+const Element = href ? 'a' : 'button';
+---
+
+<Element
+  class:list={['app-button', `app-button--${variant}`, className]}
+  {href}
+  type={Element === 'button' ? 'button' : undefined}
+>
+  {text}
+</Element>
+
+<style>
+  
+  .app-button {
+    
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    
+    
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px; 
+    
+    
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  
+  .app-button--primary {
+    
+    background-color: #00339a; 
+    color: #ffffff; 
+    border: 2px solid #00339a;
+  }
+  
+  .app-button--primary:hover,
+  .app-button--primary:focus {
+    background-color: #0040b3; 
+    color: #ffffff;
+    border-color: #0040b3;
+  }
+
+  
+  .app-button--secondary {
+    background-color: transparent; 
+    color: #00339a; /* Mavi yazı */
+    border: 2px solid #00339a; /* Mavi çerçeve */
+  }
+
+  .app-button--secondary:hover,
+  .app-button--secondary:focus {
+    background-color: #00339a; 
+    color: #ffffff;
+  }
+</style>
