@@ -85,7 +85,7 @@ html.dark {
 
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
-  color: #101010;
+  color: #cccccc;
 }
 
 .dark .nav-links a {
@@ -96,19 +96,20 @@ html.dark {
   color: #ffffff;
 }
 .dark .top-bar {
-  background-color: #2c2c2c4d;
+  background-color: rgba(0, 0, 0, 0.7);
   color: #ffffff;
 }
 
 .dark .top-bar a{
-  color: #ccc;
+  color: #ffffff;
+
 }
 
 .dark .top-bar a:hover {
-  color: #ffffff;
+  color: #cccccc;
 }
 .dark .main-nav-bar {
-  background-color: #1e1e1e;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dark .top-bar-button-link:not(.primary-button) {
@@ -176,8 +177,9 @@ footer {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+  width: 90%;
   gap: 32px;
-  width: fit-content;
   margin: 0 auto;
   justify-content: start;
 }
@@ -225,7 +227,7 @@ footer {
 }
 .blog-description {
   font-size: 16px;
-  color: #555;
+  color: #ffffff;
 }
 
 .blog-link {
@@ -257,15 +259,32 @@ footer {
   align-items: center; 
   text-align: center; 
 }
+.right-content {
 
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  padding-right: 140px;
+  text-align: right;
+  align-items:flex-end;
+}
+.left-content {
 
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  padding-left: 140px;
+  text-align: left;
+  align-items:flex-start;
+}
 header {
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .top-bar {
-  background-color: #48397b4d;
+  background-color:transparent;
   color: #000000; 
   display: flex;
   justify-content: space-between; 
@@ -288,7 +307,7 @@ header {
 .top-bar-right {
   display: flex;
   align-items: center;
-  gap:0px;
+  gap:30px;
 }
 
 .top-bar-button-link {
@@ -307,13 +326,13 @@ header {
 }
 
 
-/* --- 2. ANA NAVİGASYON STİLLERİ --- */
 .main-nav-bar {
   display: flex;
   justify-content: normal; 
   align-items: center;
-  background-color: #ffffff; /* Beyaz arka plan */
-
+  background-color: transparent;
+  padding: 10px 20px;
+  gap: 20px;
 }
 
 .main-nav-left,
@@ -339,11 +358,82 @@ footer {
   padding: 1rem 0;
   
   
-  background-color: #f1f5f9; 
-  color: #333; 
+  background-color: transparent ; 
+  color: #000000; 
 }
 
 .dark footer {
-  background-color: #1a1a1a; 
+  background-color: transparent ; 
   color: #e0e0e0;
 }
+
+
+.kurs-grid .blog-item {
+   
+    display: block; 
+    text-align: center;
+    padding: 30px 20px; 
+    min-height: 450px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Daha derin gölge */
+}
+
+
+.theme-1 {
+    background-color: #790000; 
+    color: #ffffff;
+    background-size: 10px 10px;
+}
+
+.theme-2 {
+    background-color: #a92525;
+    color: #e65100;
+    
+    background-size: 15px 15px;
+}
+
+.theme-3 {
+    background-color: #53a55d;
+    color: #4a148c;
+    
+    background-size: 20px 20px;
+}
+
+/* src/layouts/MarkdownPostLayout.astro <style is:global> içine */
+
+/* Liste Kapsayıcısı */
+.ozel-liste {
+  list-style: none; 
+  padding-left: 0; 
+  max-width: 700px;
+  margin-top: 1.5rem;
+}
+
+/* Liste Öğesi */
+.ozel-liste li {
+  display: flex; 
+  align-items: flex-start; 
+  margin-bottom: 1.25rem; 
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 100px;
+}
+
+
+.ozel-liste li::before {
+  content: '⟢'; 
+  color: #48397b;
+  font-weight: 900;
+  font-size: 2rem; 
+  margin-right: 0.75rem; 
+  margin-top: -4px; 
+  flex-shrink: 0; 
+}
+
+
+.dark .ozel-liste li {
+  color: #cccccc;
+}
+.dark .ozel-liste li::before {
+  color: #90caf9; 
+}
+

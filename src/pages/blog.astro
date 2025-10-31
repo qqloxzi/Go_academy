@@ -1,9 +1,12 @@
 ---
-import'../styles/global.css';
+import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = await Astro.glob('./posts/*.md'); 
+
+
 const pageTitle = "Go Kütüphanesi";
 ---
+
 <BaseLayout>
   <h1 class="blog-page-title">{pageTitle}</h1>
 
@@ -12,7 +15,7 @@ const pageTitle = "Go Kütüphanesi";
     <li class="blog-item">
       <a href={post.url} class="blog-link">
         {post.frontmatter.image && (
-          <img src={post.frontmatter.image}  class="blog-image" />
+          <img src={post.frontmatter.image}  class="blog-image" alt={post.frontmatter.title} />
         )}
         <h2 class="blog-post-title">{post.frontmatter.title}</h2>
         <p class="blog-description">{post.frontmatter.description}</p>
