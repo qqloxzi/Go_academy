@@ -13,6 +13,7 @@
     "@astrojs/rss": "^4.0.13",
     "apexcharts": "^5.3.5",
     "astro": "^5.14.8",
-    "preact": "^10.27.2"
+    "preact": "^10.27.2",
+    "tsparticles-slim": "^2.12.0"
   }
 }
