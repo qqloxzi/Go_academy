@@ -2,11 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: ....
 author: oüuz erdoğan
-description: "Highway to Hell!"
-theme: "theme-1"
+description: "Yeni Bir Dünya..."
+theme: "theme-3"
 ---
 
-<h3>Highway to hell</h3>
+<h3>Yeni Bir Dünya...</h3>
 
 <ul class="ozel-liste checklist-yesil">
   <li>

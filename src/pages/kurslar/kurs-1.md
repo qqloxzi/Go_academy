@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: ....
 author: oüuz erdoğan
-description: "Highway to Hell!"
+description: "Kozmik Yolculuk"
 theme: "theme-1"
 ---
 
