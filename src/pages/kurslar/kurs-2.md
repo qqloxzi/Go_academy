@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: ....
+title: savaşçı ruh
 author: oüuz erdoğan
 description: "Savaşçı Ruh!"
 theme: "theme-2"

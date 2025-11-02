@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const rawPosts = await Astro.glob('./kurslar/*.md');
 const allPosts = rawPosts;
-const pageTitle = "Sizin için uygun planlar";
+const pageTitle = "Eğitim Planları";
 ---
 
 <BaseLayout>
@@ -12,7 +12,7 @@ const pageTitle = "Sizin için uygun planlar";
 
   <ul class="blog-list kurs-grid">
     {allPosts.map((post) => (
-      <li class:list={['blog-item', post.frontmatter.theme]}> 
+      <li class:list={['card blog-item', post.frontmatter.theme]}> 
         <a href={post.url} class="blog-link">
           {post.frontmatter.image && (
             <img src={post.frontmatter.image}  class="blog-image" alt={post.frontmatter.title} />

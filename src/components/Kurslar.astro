@@ -1,0 +1,88 @@
+---
+
+import '../styles/global.css';
+
+
+const rawPosts = await Astro.glob('../pages/kurslar/*.md');
+
+const pageTitle = "Eğitim Planları";
+const allPosts = rawPosts.slice(0, 3); 
+---
+
+
+
+  <h1 class="blog-page-title">{pageTitle}</h1>
+<ul class="blog-list">
+  {allPosts.map((post) => (
+    
+    <li class="card blog-item"> 
+      <a href={post.url} class="blog-link">
+        
+        {post.frontmatter.image && (
+          <img src={post.frontmatter.image}  class="blog-image" alt={post.frontmatter.title} />
+        )}
+        
+        <div class="blog-content">
+          <h2 class="blog-post-title">{post.frontmatter.title}</h2>
+          <p class="blog-description">{post.frontmatter.description}</p>
+        </div>
+
+      </a>
+    </li>
+  ))}
+</ul>
+
+{/* ... mevcut kodunuz (ul etiketi bittikten sonra) ... */}
+
+<style>
+  /* 1. Animasyonun kendisini tanımlıyoruz */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 2. Animasyon alacak tüm elementleri (başlık ve kutular)
+     başlangıçta gizliyoruz ve ana animasyonu atıyoruz. */
+  .blog-page-title,
+  .blog-list li {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* Animasyon bittiğinde görünür kal */
+  }
+
+  /* 3. Sıralamayı gecikmeler (delay) ile ayarlıyoruz */
+  
+  /* Başlık ilk gelsin */
+  .blog-page-title {
+    animation-delay: 1.8s;
+  }
+
+  /* :nth-child() seçicisi ile listedeki her bir kutuyu (li)
+    sırayla hedefliyoruz.
+  */
+  .blog-list li:nth-child(1) {
+    animation-delay: 0.9s; /* 1. kutu */
+  }
+
+  .blog-list li:nth-child(2) {
+    animation-delay: 0.9s; /* 2. kutu */
+  }
+
+  .blog-list li:nth-child(3) {
+    animation-delay: 0.9s; /* 3. kutu */
+  }
+
+.blog-item {
+    justify-content: center;
+    text-align: center; /* İçerideki metinlerin de ortalanmasını garantiler */
+  }
+  
+</style>

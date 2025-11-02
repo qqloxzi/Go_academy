@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: ....
+title: Başlangıç
 author: oüuz erdoğan
 description: "Yeni Bir Dünya..."
 theme: "theme-3"

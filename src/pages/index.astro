@@ -3,33 +3,100 @@ import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "anasayfa";
 import Button from '../components/Button.astro';
+import About from '../components/About.astro'; 
+import Kurslar from '../components/Kurslar.astro'; 
+import Blog from '../components/Blog.astro'; 
 ---
 
 <BaseLayout> 
 
-<div class="left-content ">
-<h1>Agora, gerçekten nedir?</h1>
-<p> aisglaşslmasglmaşglm</p>
+  <main class="page-content">
 
+    <div class="center-content">
+      <h1>Agora-Go Akademisi</h1>
+      <p> Online Lig..Eğitmenlerin maç sonu analizi ve yorumuları...</p>
+      <p>Farklı kyular için farklı yaklaşımlar ve planlar. </p>
+      <p>Kolektif bir platform-zamanla farklı eğitmenler ve kurslar katılacak. </p>
 
-<Button 
-  text="Gerçekten, neden?" 
-  href="/about" 
-  variant="secondary" />
-</div>
+ 
+      <Button 
+        text="Size göre bir lig bulun!" 
+        href="/lig" 
+        variant="secondary" />
+      
+    </div>
+    <Kurslar />
+    <Blog />
 
-<div class="right-content">
-<h1>Sunduğumuz Eğitim Programları</h1>
-<p>Birden Fazla Eğitmen Tek Bir Çatıda: 3 Ayrı Seviye İçin Kurslar, Online Lig... </p>
-
-
-<Button 
-  text="dahası" 
-  href="/kurslar" 
-  variant="secondary" />
-</div>
-
+  </main>
 </BaseLayout>
 
+<style>
+  .page-content {
+    display: flex; /* Öğeleri alt alta dizmek için */
+    flex-direction: column;
+    
+    /* Aralarına 3rem (yaklaşık 48px) boşluk ekle */
+    gap: 5rem; 
+  }
+
+  <style>
+  .page-content {
+    display: flex; /* Öğeleri alt alta dizmek için */
+    flex-direction: column;
+    
+    /* Aralarına 3rem (yaklaşık 48px) boşluk ekle */
+    gap: 7rem; 
+  }
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 2. Elementlere animasyonu atama */
+
+  /* h1, p ve butonu animasyon öncesi gizliyoruz */
+  .center-content h1,
+  .center-content p,
+  .center-content :global(a[href="/lig"]) {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  /* Paragraflar ve Buton için animasyon (hızlı olanlar) */
+  .center-content p,
+  .center-content :global(a[href="/lig"]) {
+    animation-duration: 0.7s; /* Normal hız */
+  }
+
+  /* H1 için animasyon (YAVAŞ OLAN) */
+  .center-content h1 {
+    animation-duration: 1s; /* Daha yavaş (süreyi uzattık) */
+  }
 
 
+  /* 3. GÜNCELLENMİŞ Gecikme Sırası (h1 en sonda) */
+  .center-content p:nth-of-type(1) {
+    animation-delay: 0.3s; /* Önce 1. paragraf */
+  }
+  .center-content p:nth-of-type(2) {
+    animation-delay: 0.6s; /* Sonra 2. paragraf */
+  }
+  .center-content p:nth-of-type(3) {
+    animation-delay: 0.9s; /* Sonra 3. paragraf */
+  }
+  .center-content :global(a[href="/lig"]) {
+    animation-delay: 1.8s; /* Sonra Buton */
+  }
+  .center-content h1 {
+    animation-delay: 1.8s; /* EN SON h1 (1.0s gecikmeyle) */
+  }
+</style>

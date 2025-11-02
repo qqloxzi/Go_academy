@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: ....
+title: Dan level
 author: oüuz erdoğan
-description: "Kozmik Yolculuk"
+description: "+asfasfsaff"
 theme: "theme-1"
 ---
 
