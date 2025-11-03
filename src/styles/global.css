@@ -1,6 +1,8 @@
+/* === TEMİZLENMİŞ global.css === */
+
 html {
   background-color: #5050509f;
-  font-family: 'lexend', serif ;
+  font-family: 'lexend', serif;
 }
 
 body {
@@ -11,7 +13,6 @@ body {
   line-height: 1.5;
   background-color: hsl(220, 10%, 98%);
   min-height: 100vh;
- 
 }
 
 h1 {
@@ -137,23 +138,17 @@ html.dark {
   color: #ffffff;
 }
 
-
-
-
 .dark .blog-post-title {
   color: hsl(220, 10%, 98%); 
 }
-
 
 .dark .blog-description {
   color: hsl(220, 10%, 88%); 
 }
 
-
 .dark .blog-page-title {
   color: #90caf9;
 }
-
 
 .dark .logo {
    color: hsl(220, 10%, 98%);
@@ -447,103 +442,6 @@ footer {
     inset: 0;
 }
 
-/* ================================================= */
-/* === YENİ EKLENECEK KISIM (CSS Dosyanızın Sonuna) === */
-/* ================================================= */
-
-/* 1. Sayfa içeriğini ortalayan ana kutu */
-.content-container {
-  max-width: 800px; /* Kutunun maksimum genişliği */
-  margin: 40px auto; /* Sayfayı dikeyde boşluklu, yatayda ortalı yapar */
-  padding: 30px 40px; /* Kutunun iç boşlukları */
-  background-color: #fff; /* Açık tema arka planı */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  
-  /* Ana kutu animasyonu */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.content-container:hover {
-  transform: translateY(-5px); /* Üzerine gelince hafifçe yukarı kayar */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* 2. 'content-container' içindeki liste (<ul>) için stiller */
-.content-container ul {
-  list-style: none; /* Madde işaretlerini (noktaları) kaldır */
-  padding: 0;
-  display: grid;
-  gap: 20px; /* Kutucuklar arası boşluk */
-  margin-top: 30px;
-}
-
-/* 3. 'content-container' içindeki her liste elemanı (<li>) için kutucuk stili */
-.content-container ul li {
-  background-color: #e8f5e9; /* Açık yeşil arka plan */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #4caf50; /* Soldaki yeşil vurgu çizgisi */
-  
-  /* Kutucuk animasyonu */
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.content-container ul li:hover {
-  transform: translateX(5px); /* Üzerine gelince sağa kayar */
-  background-color: #dcedc8;
-}
-
-/* 4. Liste içindeki <strong> etiketleri (Başlıklar) */
-.content-container ul li strong {
-  color: #388e3c;
-  font-weight: 700;
-}
-
-/* ====================================== */
-/* === YENİ EKLENECEK DARK MODE KISMI === */
-/* ====================================== */
-
-/* Koyu temada ana içerik kutusu */
-.dark .content-container {
-  background-color: hsl(220, 10%, 25%); /* Sizin koyu tema renklerinizden biri */
-}
-
-/* Koyu temada liste kutucukları */
-.dark .content-container ul li {
-  background-color: #2e3b2f; /* Koyu yeşil */
-  border-left-color: #66bb6a;
-}
-
-.dark .content-container ul li:hover {
-  background-color: #38473a;
-}
-
-/* Koyu temada liste başlıkları */
-.dark .content-container ul li strong {
-  color: #81c784; /* Açık yeşil */
-}
-
-/* ... (Diğer stiller) ... */
-
-    .blog-list li:nth-child(1).blog-item {
-      background-color: #fff5f5; /* 1. Kutu (Açık Kırmızı) */
-    }
-    html.dark .blog-list li:nth-child(1).blog-item {
-      background-color: #2a1f1f; 
-    }
-
-    .blog-list li:nth-child(2).blog-item {
-      background-color: #f0f9ff; /* 2. Kutu (Açık Mavi) */
-    }
-    html.dark .blog-list li:nth-child(2).blog-item {
-      background-color: #1e2533; 
-    }
-
-    .blog-list li:nth-child(3).blog-item {
-      background-color: #f0fdf4; /* 3. Kutu (Açık Yeşil) */
-    }
-    html.dark .blog-list li:nth-child(3).blog-item {
-      background-color: #1f2a23; 
-    }
+/* === BİTİŞ === 
+  Buradan sonraki tüm hatalı kodları sildim.
+*/

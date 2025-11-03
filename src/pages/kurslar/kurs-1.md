@@ -12,7 +12,17 @@ maddeler:
 
 <h3 style="text-align: center;">kılıç sanatında efsanevi usta </h3>
 
-* **Kimler Katılabilir:** 10 kyu ve üstü goseverler
-* **Eğitmen:** Tuğkan Eren (4D)
-* **Ders Süreci ve Kapsamı:** Yakında duyurulacak
-* **Eğitim Ücreti:** Yakında duyurulacak
+<ul class="detay-kutucuklari">
+  <li>
+    <strong>Kimler Katılabilir:</strong> 10 kyu ve üstü goseverler
+  </li>
+  <li>
+    <strong>Eğitmen:</strong> Tuğkan Eren (4D)
+  </li>
+  <li>
+    <strong>Ders Süreci ve Kapsamı:</strong> Yakında duyurulacak
+  </li>
+  <li>
+    <strong>Eğitim Ücreti:</strong> Yakında duyurulacak
+  </li>
+</ul>

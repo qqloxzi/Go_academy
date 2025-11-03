@@ -6,11 +6,11 @@ const pageTitle = "Eğitim Planları";
 const allPosts = rawPosts.slice(0, 3); 
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   
   <h1 class="blog-page-title">{pageTitle}</h1>
 
-  <ul class="blog-list">
+  <ul class="blog-list" id="egitim-planlari-listesi">
     {allPosts.map((post) => (
       <li class="card blog-item"> 
         <a href={post.url} class="blog-link">
@@ -40,27 +40,9 @@ const allPosts = rawPosts.slice(0, 3);
   </a>
 
   <style>
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .blog-page-title,
-    .blog-list li,
-    .cta-box {
-      opacity: 0;
-      animation-name: fadeInUp;
-      animation-duration: 1s;
-      animation-timing-function: ease-out;
-      animation-fill-mode: forwards;
-    }
-    
-    .blog-page-title { animation-delay: 1.8s; }
-    .blog-list li:nth-child(1) { animation-delay: 0.9s; }
-    .blog-list li:nth-child(2) { animation-delay: 1.1s; }
-    .blog-list li:nth-child(3) { animation-delay: 1.3s; }
-    .cta-box { animation-delay: 1.5s; }
+    /* === SADECE BU SAYFAYA ÖZEL STİLLER === */
 
+    /* Kartların içindeki metni ortalamak için */
     .blog-item {
       display: flex;
       flex-direction: column;
@@ -74,6 +56,7 @@ const allPosts = rawPosts.slice(0, 3);
       justify-content: center;
     }
     
+    /* Kartların içindeki madde listesi */
     .kart-maddeleri {
       list-style-type: disc; 
       list-style-position: inside; 
@@ -104,12 +87,12 @@ const allPosts = rawPosts.slice(0, 3);
       background-color: transparent; 
     }
 
-    /* === ALTIN KUTU STİLLERİ === */
+    /* Altın Kutu Stilleri */
     .cta-box {
       display: block; max-width: 700px;
       margin: 50px auto 0 auto; padding: 25px 30px;
-      background-color: #fffbeb; /* Açık krem/altın */
-      border: 1px solid #f9a825; /* Altın kenarlık */
+      background-color: #fffbeb; 
+      border: 1px solid #f9a825; 
       border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center; text-decoration: none; color: inherit;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -117,4 +100,52 @@ const allPosts = rawPosts.slice(0, 3);
     .cta-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      border-color: #facc15}
+      border-color: #facc15;
+    }
+    .cta-box h3 {
+      margin-top: 0; margin-bottom: 10px;
+      font-size: 1.5rem; 
+      color: #78350f;
+    }
+    .cta-box p { 
+      margin: 0; font-size: 1rem; 
+      color: #92400e;
+    }
+    html.dark .cta-box {
+      background-color: #2a200a;
+      border-color: #785a0c;
+    }
+    html.dark .cta-box h3 { 
+      color: #fde047;
+    }
+    html.dark .cta-box p { 
+      color: #fef9c3;
+    }
+    html.dark .cta-box:hover { 
+      border-color: #facc15;
+    }
+    
+    /* Eğitim Planı Kutu Renkleri (Sadece bu sayfada çalışır) */
+    #egitim-planlari-listesi li:nth-child(1).blog-item {
+      background-color: #fff5f5; /* Kırmızı */
+    }
+    html.dark #egitim-planlari-listesi li:nth-child(1).blog-item {
+      background-color: #2a1f1f; 
+    }
+
+    #egitim-planlari-listesi li:nth-child(2).blog-item {
+      background-color: #f0f9ff; /* Mavi */
+    }
+    html.dark #egitim-planlari-listesi li:nth-child(2).blog-item {
+      background-color: #1e2533; 
+    }
+
+    #egitim-planlari-listesi li:nth-child(3).blog-item {
+      background-color: #f0fdf4; /* Yeşil */
+    }
+    html.dark #egitim-planlari-listesi li:nth-child(3).blog-item {
+      background-color: #1f2a23; 
+    }
+  </style>
+
+</BaseLayout>

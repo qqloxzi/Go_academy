@@ -1,33 +1,68 @@
 ---
 // src/layouts/MarkdownPostLayout.astro
-const { frontmatter } = Astro.props;
 
+// 1. Sadece ana şablonu import et
 import BaseLayout from "./BaseLayout.astro";
-// HATA BURADAYDI:
-// Astro'da /src klasöründeki CSS'i <link> ile çağıramazsınız.
-// DOĞRU YÖNTEM: CSS dosyasını aşağıda olduğu gibi "import" etmektir.
-// Bu, Astro'nun CSS'i alıp işlemesini ve sayfaya kendisinin eklemesini sağlar.
-import "/src/styles/global.css";
+
+// 2. global.css import'unu sildik (BaseLayout zaten yapıyor)
+// import "/src/styles/global.css"; 
+
+const { frontmatter } = Astro.props;
 ---
-<BaseLayout> 
-<html lang="tr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>{frontmatter.title}</title>
-  <meta name="description" content={frontmatter.description} />
-  
-  </head>
-<body>
+
+<BaseLayout pageTitle={frontmatter.title}>
   
   <div class="content-container">
     <h1 style="text-align: center;">{frontmatter.title}</h1>
+    
     <p style="text-align: center; color: #777; margin-bottom: 30px;">
+      Yazar: {frontmatter.author}
     </p>
     
     <slot /> 
   
   </div>
 
-</body>
-</html>
+  <style>
+    /* === YENİ KUTUCUK STİLLERİ (BAŞLANGIÇ) === */
+
+    /* .md'den gelen .detay-kutucuklari sınıfını hedefler */
+    :global(.detay-kutucuklari) {
+      list-style: none; /* Madde işaretlerini (noktaları) kaldır */
+      padding: 0;
+      margin-top: 2rem;
+      max-width: 700px; /* İçerik alanınızla aynı genişlikte olabilir */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Her bir liste elemanı (kutucuk) */
+    :global(.detay-kutucuklari li) {
+      background-color: #f9f9f9; /* Sade bir arka plan */
+      border: 1px solid #eee; /* Çok hafif bir kenarlık */
+      border-radius: 8px; /* Yumuşak kenarlar */
+      padding: 1.25rem; /* Kutu iç boşluğu */
+      margin-bottom: 1rem; /* Kutular arası boşluk */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* Çok hafif gölge */
+    }
+
+    /* Kutu içindeki başlık (strong etiketi) */
+    :global(.detay-kutucuklari li strong) {
+      display: block; /* Başlığın kendi satırında durmasını sağlar */
+      margin-bottom: 5px; /* Başlık ile içerik arası boşluk */
+      color: #444;
+      font-weight: 600;
+    }
+
+    /* Koyu Tema */
+    html.dark :global(.detay-kutucuklari li) {
+      background-color: hsl(220, 10%, 22%);
+      border-color: hsl(220, 10%, 30%);
+    }
+    html.dark :global(.detay-kutucuklari li strong) {
+      color: #eee;
+    }
+    /* === YENİ KUTUCUK STİLLERİ (BİTİŞ) === */
+  </style>
+
+</BaseLayout>
