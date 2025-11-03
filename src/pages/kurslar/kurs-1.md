@@ -1,24 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Dan level
-author: oüuz erdoğan
-description: "+asfasfsaff"
+title: "剣聖 (Kensei) "
+author: "Oğuz Erdoğan"
+description: "Kılıç sanatında efsanevi usta"
 theme: "theme-1"
+maddeler:
+  - "Daha ilerisi için"
+  - "Do-jo ile eğitim"
+  - ""
 ---
 
-<h3>Highway to hell</h3>
+<h3 style="text-align: center;">kılıç sanatında efsanevi usta </h3>
 
-<ul class="ozel-liste checklist-yesil">
-  <li>
-    <strong>Kimler Katılabilir:</strong> 10 kyu ve üstü goseverler...
-  </li>
-  <li>
-    <strong>Eğitmen:</strong> Tuğkan Eren(4D)
-  </li>
-  <li>
-    <strong>Ders Süreci ve kapsamı:</strong> Duyurulacak
-  </li>
-  <li>
-    <strong>Eğitim Ücreti:</strong> Duyurulacak
-  </li>
-</ul>
+* **Kimler Katılabilir:** 10 kyu ve üstü goseverler
+* **Eğitmen:** Tuğkan Eren (4D)
+* **Ders Süreci ve Kapsamı:** Yakında duyurulacak
+* **Eğitim Ücreti:** Yakında duyurulacak

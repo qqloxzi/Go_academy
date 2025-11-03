@@ -1,24 +1,17 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Başlangıç
-author: oüuz erdoğan
-description: "Yeni Bir Dünya..."
-theme: "theme-3"
+title: "弟子 (Deshi)"
+description: "Öğrenci, ustanın yanında eğitim gören"
+image: ""
+maddeler:
+  - "Temel duruş ve hareketler"
+  - "Disiplin ve saygı"
+  - "Usta ile birebir eğitim"
 ---
 
-<h3>Yeni Bir Dünya...</h3>
+<h3 style="text-align: center;">Öğrenci, ustanın yanında eğitim gören” </h3>
 
-<ul class="ozel-liste checklist-yesil">
-  <li>
-    <strong>Kimler Katılabilir:</strong> 10 kyu ve üstü goseverler...
-  </li>
-  <li>
-    <strong>Eğitmen:</strong> Tuğkan Eren(4D)
-  </li>
-  <li>
-    <strong>Ders Süreci ve kapsamı:</strong> Duyurulacak
-  </li>
-  <li>
-    <strong>Eğitim Ücreti:</strong> Duyurulacak
-  </li>
-</ul>
+* **Kimler Katılabilir:** 20-15kyu
+* **Eğitmen:** Ali Karakaya
+* **Ders Süreci ve Kapsamı:** Yakında duyurulacak
+* **Eğitim Ücreti:** Yakında duyurulacak

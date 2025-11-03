@@ -1,9 +1,33 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+// src/layouts/MarkdownPostLayout.astro
 const { frontmatter } = Astro.props;
----
-<BaseLayout pageTitle={frontmatter.title}>
-<p>Written by {frontmatter.author}</p>
-<slot />
-</BaseLayout>
 
+import BaseLayout from "./BaseLayout.astro";
+// HATA BURADAYDI:
+// Astro'da /src klasöründeki CSS'i <link> ile çağıramazsınız.
+// DOĞRU YÖNTEM: CSS dosyasını aşağıda olduğu gibi "import" etmektir.
+// Bu, Astro'nun CSS'i alıp işlemesini ve sayfaya kendisinin eklemesini sağlar.
+import "/src/styles/global.css";
+---
+<BaseLayout> 
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{frontmatter.title}</title>
+  <meta name="description" content={frontmatter.description} />
+  
+  </head>
+<body>
+  
+  <div class="content-container">
+    <h1 style="text-align: center;">{frontmatter.title}</h1>
+    <p style="text-align: center; color: #777; margin-bottom: 30px;">
+    </p>
+    
+    <slot /> 
+  
+  </div>
+
+</body>
+</html>

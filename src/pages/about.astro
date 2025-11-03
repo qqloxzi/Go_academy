@@ -1,40 +1,84 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+// 1. Ana şablonu (layout) import et
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Header/Footer importlarına burada gerek yok, 
+// çünkü BaseLayout'un bunları zaten içermesi gerekir.
+// (Eğer içermiyorsa, BaseLayout.astro dosyanızı düzenlemeniz gerekir)
+
 const pageTitle = "Agora Hakkında";
-const skillColor = "crimson";
-const fontWeight = "500";
-const textCase = "uppercase";
 ---
 
+<BaseLayout pageTitle={pageTitle}>
+  
+  <div class="about-container">
+    <h1 class="page-title">{pageTitle}</h1>
+    
+    <p class="page-description">
+      Agora-Go Akademisi, Go ile bir araya gelmiş kolektif bir topluluktur. 
+      Amacımız, Türkiye'deki eğitmenlerle go öğrenmek isteyen oyuncuları 
+      buluşturan canlı bir platform olmak. 
+    </p>
+    <p class="page-description">
+      Burada sadece bireysel gelişim için dersler almakla kalmazsınız; 
+      aynı zamanda Go'nun felsefesini ve hayata kattığı kazanımları 
+      da keşfedersiniz. Birlikteliğin gücüne inandığımız için yerel 
+      Go organizasyonlarına sponsor olmaya, oyunculara destek vermeye 
+      ve bu yardımlaşma kültürünü hep birlikte büyütmeye çalışıyoruz.
+    </p>
+  </div>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-        <style define:vars={{skillColor,fontWeight,textCase}}>
-      h1 {
-        color: black;
-        font-size: 4rem;
-      }
-      .skill{
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style>
-  </head>
-  <body>
-    <BaseLayout>
-    <h4>{pageTitle}</h4>
-      <p>Agora çevrimiçi go eğitimi veren kolektif bir platform olması yanında yerel go organizyonları ve oyuncuları desteklemeyi amaçlar. </p>
-  </BaseLayout>
-  </body>
-</html>
+  <style>
+    /* Kurslar sayfasındaki fadeInUp animasyonunun aynısı */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
+    /* İçeriği saran ana kutu. 
+      Minimalist ve ortalanmış bir görünüm sağlar.
+    */
+    .about-container {
+      max-width: 800px; /* Genişlik */
+      margin: 40px auto 80px auto; /* Dikeyde ve yatayda ortalama */
+      padding: 0 20px; /* Kenar boşlukları (mobil için) */
+      
+      /* Animasyon ayarları */
+      opacity: 0;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s; /* Sayfa açıldıktan hemen sonra gelsin */
+    }
+
+    /* Sayfa Başlığı (Kurslar sayfasıyla tutarlı) */
+    .page-title {
+      text-align: center;
+      font-size: 2.5rem; 
+      font-weight: 700;
+      color: #1e40af; /* Kurslar sayfasındaki başlık rengi */
+      margin-bottom: 2.5rem;
+    }
+
+    /* Açıklama Paragrafları (Sade ve okunaklı) */
+    .page-description {
+      font-size: 1.125rem; /* 18px - Daha okunaklı */
+      line-height: 1.8; /* Satır aralığı */
+      color: #333; /* Ana metin rengi */
+      margin-bottom: 1.5rem;
+    }
+
+    .page-description:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    /* Koyu tema için basit uyum (kurslar sayfasıyla tutarlı) */
+    html.dark .page-title {
+       color: #90caf9; 
+    }
+    html.dark .page-description {
+       color: #ccc; 
+    }
+  </style>
+</BaseLayout>
