@@ -1,7 +1,7 @@
-/* === TEMİZLENMİŞ global.css === */
+/* === TEMİZLENMİŞ global.css (Top Bar Kaldırıldı) === */
 
 html {
-  background-color: #5050509f;
+  background-color: #b4b4b4;
   font-family: 'lexend', serif;
 }
 
@@ -11,8 +11,15 @@ body {
   max-width: 100%;
   padding: 0rem;
   line-height: 1.5;
-  background-color: hsl(220, 10%, 98%);
   min-height: 100vh;
+  background: 
+    radial-gradient(
+      circle at 40% 0%, 
+      hsl(0, 0%, 65%), /* Parlamanın rengi (hafif beyaz) */
+      transparent 60% /* Parlamanın dağılımı */
+    ),
+    hsla(220, 10%, 98%, 0.85);
+    backdrop-filter: blur(8px);
 }
 
 h1 {
@@ -99,31 +106,25 @@ html.dark {
 }
 
 .dark body {
-  background-color: hsl(220, 10%, 15%);
   color: hsl(220, 10%, 88%);
-}
-.dark .top-bar {
-  background-color: hsl(220, 10%, 25%);
-  color: #ffffff;
+  
+
+  
+  background: 
+    radial-gradient(
+      circle at 50% 0%, 
+      hsla(0, 0%, 100%, 0.1), /* Koyu mod için çok sönük bir parlama */
+      transparent 60%
+    ),
+    hsla(220, 10%, 15%, 0.85); /* %85 opaklıkta koyu ana arka plan */
+  
+  background-attachment: fixed;
+  backdrop-filter: blur(8px);
 }
 
-.dark .top-bar a{
-  color: #ffffff;
-
-}
-
-.dark .top-bar a:hover {
-  color: #cccccc;
-}
 .dark .main-nav-bar {
   background-color: hsl(220, 10%, 15%);
 }
-
-.dark .top-bar-button-link:not(.primary-button) {
-  background-color: #4e446c; 
-  color: #111; 
-}
-
 
 .dark .primary-button {
   background-color: #4a6560; 
@@ -276,50 +277,22 @@ body::after {
   text-align: left;
   align-items:flex-start;
 }
+
 header {
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-}
+background-color: rgba(80, 80, 80, 0.35);
 
-.top-bar {
-  background-color:hsl(220, 10%, 78%);
-  backdrop-filter: blur(10px);
-  color: #000000; 
+
   display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 1rem;
+  align-items: center;            /* Öğeleri dikey olarak ortalar */
+  justify-content: space-between; /* İlk öğeyi sola, son öğeyi sağa yaslar */
+
+  /* İçeriğin kenarlara yapışmaması için padding ekledim */
+  padding: 10px 20px; 
+  box-sizing: border-box;         /* Padding'in genişliği bozmamasını sağlar */
 }
 
-.top-bar a {
-  color: inherit;
-  text-decoration: none;
-  margin-right: 0px;
-  transition: color 0.2s;
-}
-
-.top-bar a:hover {
-  color: #7d3e3e;
-}
-
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap:30px;
-}
-
-.top-bar-button-link {
-  padding: 4px 6px;
-  border-radius: 2px;
-  font-weight: 500;
-  margin-right: 0;
-}
-.top-bar-button-link:not(.primary-button) {
-    background-color: #11100f;
-    color: #949494;
-}
 .primary-button {
     background-color: #604a65;
     color: white;
@@ -327,7 +300,7 @@ header {
 
 
 .main-nav-bar {
-  background-color: hsl(220, 10%, 88%);
+  background-color: hsl(0, 0%, 48%);
   display: flex;
   justify-content: normal; 
   align-items: center;
@@ -442,6 +415,3 @@ footer {
     inset: 0;
 }
 
-/* === BİTİŞ === 
-  Buradan sonraki tüm hatalı kodları sildim.
-*/
