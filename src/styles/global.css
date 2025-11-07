@@ -1,7 +1,5 @@
-/* === TEMİZLENMİŞ global.css (Top Bar Kaldırıldı) === */
-
 html {
-  background-color: #b4b4b4;
+  background-color: #ffffff;
   font-family: 'lexend', serif;
 }
 
@@ -15,7 +13,7 @@ body {
   background: 
     radial-gradient(
       circle at 40% 0%, 
-      hsl(0, 0%, 65%), /* Parlamanın rengi (hafif beyaz) */
+      hsl(0, 0%, 84%), /* Parlamanın rengi (hafif beyaz) */
       transparent 60% /* Parlamanın dağılımı */
     ),
     hsla(220, 10%, 98%, 0.85);
@@ -281,7 +279,7 @@ body::after {
 header {
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-background-color: rgba(80, 80, 80, 0.35);
+background-color: rgba(125, 125, 125, 0.35);
 
 
   display: flex;

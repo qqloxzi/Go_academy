@@ -1,0 +1,127 @@
+---
+const faqData = [
+  {
+    question: "Agora-Go Akademisi nedir?",
+    answer: "Go oyunu üzerine kurulu, online ligler ve eğitmen analizleri sunan kolektif bir eğitim platformudur."
+  },
+  {
+    question: "Eğitimlere nasıl katılabilirim?",
+    answer: "Eğitim planları sayfamızı inceleyebilir veya 'Size göre bir lig bulun!' butonuna tıklayarak lig formatındaki eğitimlerimize göz atabilirsiniz."
+  },
+  {
+    question: "Farklı eğitmenler olacak mı?",
+    answer: "Evet, platformumuz zamanla farklı eğitmenlerin ve yeni kursların katılımıyla büyüyecek kolektif bir yapıdadır."
+  },
+  {
+    question: "aasdasdasdas?",
+    answer: " asdsadsad"
+  }
+];
+---
+
+<section class="faq-container">
+  <h2 class="faq-title">Sık Sorulan Sorular</h2>
+  
+  <div class="faq-list">
+    {faqData.map(item => (
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>{item.question}</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>{item.answer}</p>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<style>
+  .faq-container {
+    width: 100%;
+    max-width: 750px; /* SSS bölümünün genişliği */
+    margin: 3rem auto 0; /* Sayfada ortalamak ve üstte boşluk bırakmak */
+    padding: 0 1rem;
+  }
+  
+  .faq-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-primary, #222); /* global.css'ten değişken almayı dener */
+  }
+  
+  .faq-item {
+    background-color: var(--color-bg-offset, #f9f9f9);
+    border: 1px solid var(--color-border, #eaeaea);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    /* Açılıp kapanırken yumuşak bir gölge geçişi */
+    transition: box-shadow 0.3s ease;
+  }
+
+  .faq-item:hover {
+     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Varsayılan üçgen ikonu kaldırır */
+    color: var(--color-text-primary, #333);
+  }
+
+  /* Webkit tabanlı tarayıcılar için varsayılan ikonu gizle */
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-accent, #8A2BE2);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* <details> etiketi [open] durumuna geçtiğinde... */
+  .faq-item[open] > .faq-question {
+    /* Açıkken soruya bir alt çizgi ekleyebiliriz */
+    border-bottom: 1px solid var(--color-border, #eaeaea);
+  }
+  
+  .faq-item[open] .faq-icon {
+    /* İkonu '-' (eksi) yapar ve 45 derece döndürür */
+    content: '−';
+    transform: rotate(45deg);
+  }
+
+  /* Cevap alanı için stiller */
+  .faq-answer {
+    padding: 1.25rem 1.5rem;
+    padding-top: 1rem;
+    color: var(--color-text-secondary, #555);
+    line-height: 1.7;
+  }
+  .faq-answer p {
+    margin: 0; /* Paragrafın varsayılan boşluğunu sıfırla */
+  }
+
+  /* --- KOYU TEMA AYARLARI --- */
+  html.dark .faq-title {
+    color: var(--color-text-primary-dark, #eee);
+  }
+  html.dark .faq-item {
+    background-color: var(--color-bg-offset-dark, #1f1f1f);
+    border-color: var(--color-border-dark, #333);
+  }
+  html.dark .faq-item:hover {
+     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  html.dark .faq-question {
+    color: var;}

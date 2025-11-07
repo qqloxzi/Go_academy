@@ -1,18 +1,27 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "剣聖 (Kensei)"
-author: "Oğuz Erdoğan"
-description: "Kılıç sanatında efsanevi usta"
+title: "9-5 kyu Ligi"
+description: "afagagasg"
 theme: "theme-1"
 maddeler:
-  - "Daha ilerisi için"
-  - "Do-jo ile eğitim"
+  - "Eğitmen: Oğuz Erdoğan(1D)"
+  - "Eğitim süresi:3 Ay"
   - ""
 ---
 
-### kılıç sanatında efsanevi usta
+<h3 style="text-align: center;">9-5 kyu </h3>
 
-* **Kimler Katılabilir:** 10 kyu ve üstü goseverler
-* **Eğitmen:** Tuğkan Eren (4D)
-* **Ders Süreci ve Kapsamı:** Yakında duyurulacak
-* **Eğitim Ücreti:** Yakında duyurulacak
+<ul class="detay-kutucuklari">
+  <li>
+    <strong>Kimler Katılabilir:</strong> 10 kyu ve üstü goseverler
+  </li>
+  <li>
+    <strong>Eğitmen:</strong> Tuğkan Eren (4D)
+  </li>
+  <li>
+    <strong>Ders Süreci ve Kapsamı:</strong> Yakında duyurulacak
+  </li>
+  <li>
+    <strong>Eğitim Ücreti:</strong> Yakında duyurulacak
+  </li>
+</ul>
