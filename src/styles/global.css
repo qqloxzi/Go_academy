@@ -1,23 +1,31 @@
 html {
-  background-color: #ffffff;
+  background-color: transparent ;
   font-family: 'lexend', serif;
 }
 
+
 body {
   margin: 0;
-  width: 100%;
-  max-width: 100%;
-  padding: 0rem;
-  line-height: 1.5;
+  padding: 0;
   min-height: 100vh;
-  background: 
-    radial-gradient(
-      circle at 40% 0%, 
-      hsl(0, 0%, 84%), /* Parlamanın rengi (hafif beyaz) */
-      transparent 60% /* Parlamanın dağılımı */
-    ),
-    hsla(220, 10%, 98%, 0.85);
-    backdrop-filter: blur(8px);
+  font-family: 'Lexend', serif;
+
+  /* Arka plan çizgileri (önce bunlar) */
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to left, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 0%, hsl(0, 0%, 84%), transparent 60%);
+  
+  /* Katman sırası: en son yazılan en üstte görünür! */
+  background-blend-mode: multiply; /* karışımı belirginleştirir */
+
+  background-color: hsla(220, 10%, 98%, 0.7); /* opaklığı biraz azalt */
+  background-size: 100px 100%, 100px 100%, 100% 100%;
+  background-repeat: repeat-y, repeat-y, no-repeat;
+  background-position: left top, right top, center top;
+
+  /* fixed yerine scroll kullan */
+  background-attachment: scroll;
 }
 
 h1 {
@@ -106,20 +114,34 @@ html.dark {
 .dark body {
   color: hsl(220, 10%, 88%);
   
-
-  
-  background: 
+  /* ARKA PLAN KATMANLARI (KOYU MOD İÇİN EKLENDİ) */
+  background-image: 
+    linear-gradient(to right, 
+      rgba(255, 255, 255, 0.05) 1px, /* Koyu zeminde açık renk çizgi */
+      transparent 1px,
+      transparent 50px
+    ),
+    linear-gradient(to left, 
+      rgba(255, 255, 255, 0.05) 1px, /* Koyu zeminde açık renk çizgi */
+      transparent 1px,
+      transparent 50px
+    ),
     radial-gradient(
       circle at 50% 0%, 
-      hsla(0, 0%, 100%, 0.1), /* Koyu mod için çok sönük bir parlama */
+      hsla(0, 0%, 100%, 0.1),
       transparent 60%
-    ),
-    hsla(220, 10%, 15%, 0.85); /* %85 opaklıkta koyu ana arka plan */
-  
-  background-attachment: fixed;
-  backdrop-filter: blur(8px);
-}
+    );
+    
+  /* Koyu Ana Renk */
+  background-color: hsla(220, 10%, 15%, 0.85); 
 
+  /* Arka plan ayarları */
+  background-size: 100px 100%, 100px 100%, 100% 100%;
+  background-position: left top, right top, center top;
+  background-repeat: repeat-y, repeat-y, no-repeat;
+  background-attachment: fixed;
+  /* backdrop-filter: blur(8px); (Body üzerinde etkisiz, kaldırıldı) */
+}
 .dark .main-nav-bar {
   background-color: hsl(220, 10%, 15%);
 }
